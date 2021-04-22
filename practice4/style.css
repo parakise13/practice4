@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5e6381;
+  padding: 8px 12px;
+}
+
+a {
+  text-decoration: none;
+  color: #bec0cc;
+}
+
+.navbar_logo {
+  font-size: 24px;
+}
+.navbar_logo i {
+  color: #bec0cc;
+}
+
+.navbar_icons {
+  font-size: 30px;
+  color: #d9d5de;
+  list-style: none;
+  display: flex;
+}
+
+.navbar_icons li {
+  padding: 12px;
+}
+
+.navbar_menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar_menu li:hover {
+  background-color: #4d4963;
+  border-radius: 4px;
+}
+.navbar_menu li {
+  padding: 8px 12px;
+}
+
+.navbar_toggleBtn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: #bec0cc;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px, 24px;
+  }
+  .navbar_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar_menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar_icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar_toggleBtn {
+    display: block;
+  }
+
+  .navbar_menu.active,
+  .navbar_icons.active {
+    display: flex;
+  }
+}
